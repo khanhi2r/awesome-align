@@ -1,4 +1,4 @@
-TRAIN_FILE=data/enbm.src-tgt
+TRAIN_FILE=data/enbm1000.src-tgt
 EVAL_FILE=data/enbm.src-tgt
 OUTPUT_DIR=outdir
 
