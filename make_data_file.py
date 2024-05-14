@@ -24,4 +24,11 @@ for utt, text_list in tqdm(list(text_dict.items()), desc="filtering text_dict"):
 with open("data/enbm.src-tgt", "w") as f:
     for utt, text_list in tqdm(list(filtered_text_dict.items()), desc="writing ..."):
         text_list = [clean_line(text) for text in text_list]
+        skip = False
+        for text in text_list:
+            if len(text) == 0:
+                skip = True
+                break
+        if skip:
+            continue
         f.write(" ||| ".join(text_list) + "\n")
