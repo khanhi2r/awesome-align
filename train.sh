@@ -16,6 +16,6 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python run_train.py \
     --learning_rate 2e-5 \
     --save_steps 4000 \
     --max_steps 20000 \
-    --no-cuda \
+    --no_cuda \
     --do_eval \
     --eval_data_file=$EVAL_FILE
