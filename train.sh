@@ -1,8 +1,8 @@
-TRAIN_FILE=data/enbm1000.src-tgt
+TRAIN_FILE=data/enbm.src-tgt
 EVAL_FILE=data/enbm.src-tgt
 OUTPUT_DIR=outdir
 
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python run_train.py \
+CUDA_VISIBLE_DEVICES=0 python run_train.py \
     --output_dir=$OUTPUT_DIR \
     --model_name_or_path=bert-base-multilingual-cased \
     --extraction 'softmax' \
@@ -16,6 +16,5 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python run_train.py \
     --learning_rate 2e-5 \
     --save_steps 4000 \
     --max_steps 20000 \
-    --no_cuda \
     --do_eval \
     --eval_data_file=$EVAL_FILE
