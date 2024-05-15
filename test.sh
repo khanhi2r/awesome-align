@@ -2,7 +2,8 @@ DATA_FILE=data/enbm.src-tgt
 OUTPUT_FILE=data/enbm.out
 
 
-MODEL_NAME_OR_PATH=outdir
+MODEL_NAME_OR_PATH=bert-base-multilingual-cased
+
 
 CUDA_VISIBLE_DEVICES=0 python run_align.py \
     --output_file=$OUTPUT_FILE \
